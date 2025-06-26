@@ -29,7 +29,7 @@ st.title("Interview Skill Analyzer")
 
 if st.button("Analyze"):
     resume_skills=extract_skills(turning_resume_into_text(resume_file),20)
-    jd_skills=turning_jd_into_text(turning_jd_into_text(job_file),20)
+    jd_skills=extract_skills(turning_jd_into_text(job_file),20)
 
     result = comapre_skills(resume_skills,jd_skills)
     st.subheader("Matched Skills")
