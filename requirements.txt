@@ -1,1 +1,3 @@
 yake
+streamlit
+pdfplumber
