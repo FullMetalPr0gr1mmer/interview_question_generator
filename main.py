@@ -1,4 +1,4 @@
-from extractor.skill_extractor import extract_skills
+from extractor.skill_extractor import *
 import streamlit as st
 import pdfplumber
 import io
@@ -28,8 +28,11 @@ job_file = st.file_uploader("Upload job decriptions (.TXT)",type=["txt"])
 st.title("Interview Skill Analyzer")
 
 if st.button("Analyze"):
-    resume_skills=extract_skills(turning_resume_into_text(resume_file),20)
-    jd_skills=extract_skills(turning_jd_into_text(job_file),20)
+    resume_skills=extract_skills_semantic(turning_resume_into_text(resume_file))
+    jd_skills=extract_skills_semantic(turning_jd_into_text(job_file))
+    print("///////////////////////////////////////////////////////////////////////////////////////")
+    print(resume_skills)
+    print(jd_skills)
 
     result = comapre_skills(resume_skills,jd_skills)
     st.subheader("Matched Skills")
@@ -38,3 +41,5 @@ if st.button("Analyze"):
     st.subheader("Missing Skills")
     st.write(result["missing_skills"])
 
+'''print(turning_resume_into_text(resume_file))
+print(turning_jd_into_text(job_file))'''

@@ -1,0 +1,37 @@
+python
+machine learning
+deep learning
+tensorflow
+keras
+pytorch
+sql
+data analysis
+problem solving
+communication
+docker
+kubernetes
+flask
+django
+angular
+.net
+leadership
+c
+c#
+c++
+react
+java
+OOP
+python
+java
+sql
+docker
+kubernetes
+aws
+azure
+network automation
+ci/cd
+project management
+ansible
+terraform
+troubleshooting
+firewall configuration
